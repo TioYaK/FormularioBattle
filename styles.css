@@ -44,8 +44,8 @@ body {
     background-color: var(--paper-bg);
     color: var(--text-color);
     width: 100%;
-    max-width: 500px;
-    padding: 30px;
+    max-width: 420px;
+    padding: 20px;
     margin: 20px;
     border: 8px solid var(--paper-border);
     border-style: ridge;
@@ -72,8 +72,8 @@ header {
 }
 
 .guild-logo {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     border: 3px solid var(--paper-border);
     border-radius: 50%;
     object-fit: cover;
@@ -83,7 +83,7 @@ header {
 
 h1 {
     font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin: 0;
     color: #5a1818;
     text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
@@ -104,7 +104,7 @@ h1 {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 label {
@@ -113,15 +113,15 @@ label {
     margin-bottom: 5px;
     font-family: 'Cinzel', serif;
     color: #3b2a1c;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 input[type="text"],
 select {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     font-family: 'Martel', serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     background-color: #eee4d1;
     border: 2px solid #a3896c;
     border-radius: var(--border-radius);
@@ -149,7 +149,7 @@ select {
 }
 
 .button-group {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -157,9 +157,9 @@ button {
     background-color: #5a1818;
     color: #e4d7c5;
     border: 2px solid #2e0c0c;
-    padding: 12px 30px;
+    padding: 10px 20px;
     font-family: 'Cinzel', serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
     border-radius: var(--border-radius);
