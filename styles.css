@@ -1,0 +1,226 @@
+:root {
+    --bg-dark: #12100e;
+    --paper-bg: #dccfb8;
+    --paper-border: #8b6e4e;
+    --text-color: #2b2118;
+    --gold: #d4af37;
+    --dark-gold: #997a00;
+    --red-alert: #a02020;
+    --success-green: #20a020;
+    --border-radius: 4px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Martel', serif;
+    background-color: var(--bg-dark);
+    /* Um fundo que lembra texturas antigas ou o client do tibia */
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(0,0,0,0.1) 0px,
+        rgba(0,0,0,0.1) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+    color: #e4d7c5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: -1;
+}
+
+.container {
+    background-color: var(--paper-bg);
+    color: var(--text-color);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    margin: 20px;
+    border: 8px solid var(--paper-border);
+    border-style: ridge;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 40px rgba(139, 110, 78, 0.4);
+    position: relative;
+    /* Textura de pergaminho sutil */
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(0, 0, 0, 0.05) 50%,
+        rgba(255, 255, 255, 0.2) 100%
+    );
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.guild-logo {
+    width: 120px;
+    height: 120px;
+    border: 3px solid var(--paper-border);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    background-color: #000;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    margin: 0;
+    color: #5a1818;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #4a3b2c;
+    margin: 5px 0 15px 0;
+}
+
+.separator {
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--paper-border), transparent);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Cinzel', serif;
+    color: #3b2a1c;
+    font-size: 1.1rem;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    font-family: 'Martel', serif;
+    font-size: 1rem;
+    background-color: #eee4d1;
+    border: 2px solid #a3896c;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    box-sizing: border-box;
+    box-shadow: inset 1px 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: #5a1818;
+    background-color: #f5eedf;
+    box-shadow: inset 1px 2px 5px rgba(0,0,0,0.1), 0 0 5px rgba(90, 24, 24, 0.3);
+}
+
+select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23a3896c%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+
+.button-group {
+    margin-top: 30px;
+    text-align: center;
+}
+
+button {
+    background-color: #5a1818;
+    color: #e4d7c5;
+    border: 2px solid #2e0c0c;
+    padding: 12px 30px;
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.2);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    transition: all 0.2s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #6e2020;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 8px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.2);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+}
+
+button:disabled {
+    background-color: #777;
+    border-color: #444;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#status-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.success {
+    background-color: #e6f4ea;
+    color: var(--success-green);
+    border: 1px solid var(--success-green);
+}
+
+.error {
+    background-color: #fce8e6;
+    color: var(--red-alert);
+    border: 1px solid var(--red-alert);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}

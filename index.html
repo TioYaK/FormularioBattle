@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BattleStorm - Recrutamento</title>
+    <!-- Fontes do Google para tema medieval -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Martel:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="logo.jpg" alt="BattleStorm Logo" class="guild-logo">
+            </div>
+            <h1>BattleStorm</h1>
+            <p class="subtitle">Formulário de Recrutamento</p>
+            <div class="separator"></div>
+        </header>
+
+        <form id="recruitment-form">
+            <div class="form-group">
+                <label for="mainchar">Nome do Mainchar:</label>
+                <input type="text" id="mainchar" name="mainchar" required placeholder="Ex: Lord Battle">
+            </div>
+
+            <div class="form-group">
+                <label for="main_server">Servidor do Mainchar:</label>
+                <select id="main_server" name="main_server" required>
+                    <option value="" disabled selected>[SELECIONAR]</option>
+                    <option value="Belaria">Belaria</option>
+                    <option value="Vesperia">Vesperia</option>
+                    <option value="Tenebrium">Tenebrium</option>
+                    <option value="Auroria">Auroria</option>
+                    <option value="Bellum">Bellum</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ts_nick">Nick do TS do Mainchar:</label>
+                <input type="text" id="ts_nick" name="ts_nick" required placeholder="Ex: Lord_B">
+            </div>
+
+            <div class="form-group">
+                <label for="desired_server">Servidor que deseja ser aceito:</label>
+                <select id="desired_server" name="desired_server" required>
+                    <option value="" disabled selected>[SELECIONAR]</option>
+                    <option value="Belaria">Belaria</option>
+                    <option value="Vesperia">Vesperia</option>
+                    <option value="Tenebrium">Tenebrium</option>
+                    <option value="Auroria">Auroria</option>
+                    <option value="Bellum">Bellum</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="char_nick">Nickname do personagem:</label>
+                <input type="text" id="char_nick" name="char_nick" required placeholder="Ex: Sir Knight">
+            </div>
+
+            <div class="button-group">
+                <button type="submit" id="submit-btn">
+                    <span>Enviar Aplicação</span>
+                </button>
+            </div>
+            
+            <div id="status-message" class="hidden"></div>
+        </form>
+    </div>
+
+    <!-- O link do Google Apps Script será colocado no arquivo script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
